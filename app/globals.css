@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
+  --foreground: #0d0d0d;
+  --primary: #0950c3;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f5f7;
+  --secondary-foreground: #0d0d0d;
+  --muted: #f3f5f7;
+  --muted-foreground: #566373;
+  --body-foreground: #1f2f2f;
+  --accent: #e7f1fe;
+  --accent-foreground: #073c92;
   --background: #ffffff;
-  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #000005;
+  --border: #dae2ec;
+  --input: #dae2ec;
+  --destructive: hsl(0 72% 45%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --warning: hsl(38 92.1% 50.2%);
+  --warning-foreground: hsl(0 0% 98%);
+  --success: hsl(160 84.1% 39.4%);
+  --success-foreground: hsl(0 0% 98%);
+  --density-xs: 6px;
+  --density-sm: 8px;
+  --density-md: 12px;
+  --density-lg: 16px;
+  --density-xl: 24px;
+
+  /* Sombras para tarjetas */
+  --shadow-retool-sm:
+    0px 2px 4px rgba(55, 55, 55, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+  /* Sombras para elementos con más elevación */
+  --shadow-retool-md:
+    0px 6px 12px rgba(55, 55, 55, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.12);
+
+  /* Sombras para diálogos y toasts */
+  --shadow-retool-lg:
+    0px 10px 20px rgba(55, 55, 55, 0.08), 0px 4px 10px rgba(0, 0, 0, 0.12);
+
+  /* Bordes */
+  --border: #dae2ec;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-body-foreground: var(--body-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success-foreground: var(--success-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@theme {
+  --spacing-density-xs: 6px;
+  --spacing-density-sm: 8px;
+  --spacing-density-md: 12px;
+  --spacing-density-lg: 16px;
+  --spacing-density-xl: 24px;
 
-@media (prefers-color-scheme: dark) {
+  --shadow-retool-sm:
+    0px 2px 4px rgba(55, 55, 55, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+  /* Sombras para elementos con más elevación */
+  --shadow-retool-md:
+    0px 6px 12px rgba(55, 55, 55, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.12);
+
+  /* Sombras para diálogos y toasts */
+  --shadow-retool-lg:
+    0px 10px 20px rgba(55, 55, 55, 0.08), 0px 4px 10px rgba(0, 0, 0, 0.12);
+
+  --border: #dae2ec;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
